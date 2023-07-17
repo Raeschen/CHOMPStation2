@@ -4,7 +4,7 @@
 
 [Website (we dont have one)](https://www.youtube.com/watch?v=oHg5SJYRHA0) - [Forums](hhttps://forums.chompstation13.net/index.php) - [Wiki](https://wiki.chompstation13.net/index.php?title=Main_Page) - [Discord](contact admin)
 
-Going to make a Pull Request? Make sure you read the [CONTRIBUTING.md](.github/CONTRIBUTING.md) first! 
+Going to make a Pull Request? Make sure you read the [CONTRIBUTING.md](.github/CONTRIBUTING.md) first!
 
 CHOMPStation was a fork of the Yawn-wider code branch which is a fork of the VOREStation code branch which is a fork of the Polaris code branch, itself a fork of the Baystation12 code branch, but we are now since separated from Yawn-wider code, while keeping some of their features, which is a fork of the VOREStation code branch which is a fork of the Polaris code branch, itself a fork of the Baystation12 code branch, for the game Space Station 13.
 
