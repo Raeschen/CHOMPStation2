@@ -43,6 +43,10 @@ jobs:
             prbody.txt
           python tools/GenerateChangelog/ss13_genchangelog_ch.py \
             html/changelogs_ch
+      - name: Remove File
+        uses: JesseTG/rm@v1.0.3
+        with:
+          path: /tools/GenerateChangelog/prbody.txt
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Automatic changelog generation for ${{ github.event.pull_request.number }}
