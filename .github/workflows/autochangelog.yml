@@ -24,6 +24,7 @@ jobs:
       - name: Ensure +x on CI directory
         run: |
           chmod -R +x ./tools/ci
+          chmod -R +x ./tools/GenerateChangelog
       - uses: actions/setup-python@v4
         with:
           python-version: '3.7'
