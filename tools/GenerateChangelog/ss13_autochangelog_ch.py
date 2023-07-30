@@ -67,6 +67,10 @@ new = 0
 
 # Parse PR body for changelog entries
 print('Reading changelogs...')
+f = open(pr_body, "r")
+pr_body = f.read()
+f.close()
+print('Reading changelogs...')
 for line in args.pr_body.splitlines():
 	print(f"Checking line '{line}'")
 	if line[:1] == "🆑" or line[:4] == ":cl:": # Find the start of the changelog
