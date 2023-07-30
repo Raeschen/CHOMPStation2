@@ -41,7 +41,7 @@ jobs:
             html/changelogs_ch \
             ${{ github.event.pull_request.number }} \
             '${{ github.event.pull_request.user.login }}' \
-            'prbody.txt'
+            'tools/GenerateChangelog/prbody.txt'
           python tools/GenerateChangelog/ss13_genchangelog_ch.py \
             html/changelogs_ch
       - name: Empty prbody.txt
