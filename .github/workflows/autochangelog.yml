@@ -24,11 +24,11 @@ jobs:
       - name: Ensure +x on CI directory
         run: |
           chmod -R +x ./tools/ci
-          chmod -R +x ./tools/GenerateChangelog
+          chmod -R +x ./tools/GenerateChangelog/prbody.txt
       - uses: actions/setup-python@v4
         with:
           python-version: '3.7'
-      - name: Write PR body to file
+      - name: Write PR body to prbody.txt
         uses: "DamianReeves/write-file-action@master"
         with:
           path: ./tools/GenerateChangelog/prbody.txt
@@ -41,13 +41,15 @@ jobs:
             html/changelogs_ch \
             ${{ github.event.pull_request.number }} \
             '${{ github.event.pull_request.user.login }}' \
-            prbody.txt
+            'prbody.txt'
           python tools/GenerateChangelog/ss13_genchangelog_ch.py \
             html/changelogs_ch
-      - name: Remove File
-        uses: JesseTG/rm@v1.0.3
+      - name: Empty prbody.txt
+        uses: "DamianReeves/write-file-action@master"
         with:
           path: ./tools/GenerateChangelog/prbody.txt
+          write-mode: overwrite
+          contents: ''
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Automatic changelog generation for ${{ github.event.pull_request.number }}
