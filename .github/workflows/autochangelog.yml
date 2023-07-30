@@ -31,7 +31,7 @@ jobs:
       - name: Write PR body to file
         uses: "DamianReeves/write-file-action@master"
         with:
-          path: /tools/GenerateChangelog/prbody.txt
+          path: ./tools/GenerateChangelog/prbody.txt
           write-mode: overwrite
           contents: $PRBODY
       - name: Generate Changelog
@@ -47,7 +47,7 @@ jobs:
       - name: Remove File
         uses: JesseTG/rm@v1.0.3
         with:
-          path: /tools/GenerateChangelog/prbody.txt
+          path: ./tools/GenerateChangelog/prbody.txt
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Automatic changelog generation for ${{ github.event.pull_request.number }}
