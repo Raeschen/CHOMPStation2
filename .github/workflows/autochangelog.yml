@@ -7,7 +7,6 @@ on:
 
 env:
   BASENAME: "chompstation"
-  PRBODY: ${{ github.event.pull_request.body }}
 
 jobs:
   autochangelog:
@@ -33,7 +32,7 @@ jobs:
         with:
           path: ./tools/GenerateChangelog/prbody.txt
           write-mode: overwrite
-          contents: $PRBODY
+          contents: '${{ github.event.pull_request.body }}'
       - name: Generate Changelog
         run: |
           pip install pyyaml
@@ -49,7 +48,7 @@ jobs:
         with:
           path: ./tools/GenerateChangelog/prbody.txt
           write-mode: overwrite
-          contents: ''
+          contents: ' '
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Automatic changelog generation for ${{ github.event.pull_request.number }}
