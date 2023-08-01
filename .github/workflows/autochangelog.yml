@@ -33,10 +33,23 @@ jobs:
           path: ./tools/GenerateChangelog/prbody.txt
           write-mode: overwrite
           contents: '${{ github.event.pull_request.body }}'
-      - name: Generate Changelog
+      - name: Generate PR YAML
+        run: |
+          pip install pyyaml
+          python tools/GenerateChangelog/ss13_autochangelog_ch.py \
+            html/changelogs_ch \
+            ${{ github.event.pull_request.number }} \
+            '${{ github.event.pull_request.user.login }}' \
+            'tools/GenerateChangelog/prbody.txt'
+      - name: Lint YAML
+        continue-on-error: true
         run: |
           pip install pyyaml
           pip install yamlfixer-opt-nc
+          yamlfixer --summary --recurse -1 html/changelogs_ch/
+      - name: Write Changelog YAML
+        run: |
+          pip install pyyaml
           python tools/GenerateChangelog/ss13_autochangelog_ch.py \
             html/changelogs_ch \
             ${{ github.event.pull_request.number }} \
