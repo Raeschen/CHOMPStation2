@@ -46,7 +46,7 @@ jobs:
         run: |
           pip install pyyaml
           pip install yamlfixer-opt-nc
-          yamlfixer --summary --recurse -1 html/changelogs_ch
+          yamlfixer --summary --recurse -1 --tabsize 3 -d html/changelogs_ch
       - name: Write Changelog YAML
         run: |
           pip install pyyaml
