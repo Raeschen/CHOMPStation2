@@ -46,16 +46,10 @@ jobs:
         run: |
           pip install pyyaml
           pip install yamlfixer-opt-nc
-          yamlfixer --summary --recurse -1 html/changelogs_ch/
+          yamlfixer --summary --recurse -1 html/changelogs_ch
       - name: Write Changelog YAML
         run: |
           pip install pyyaml
-          python tools/GenerateChangelog/ss13_autochangelog_ch.py \
-            html/changelogs_ch \
-            ${{ github.event.pull_request.number }} \
-            '${{ github.event.pull_request.user.login }}' \
-            'tools/GenerateChangelog/prbody.txt'
-          yamlfixer --summary --recurse -1 html/changelogs_ch/
           python tools/GenerateChangelog/ss13_genchangelog_ch.py \
             html/changelogs_ch
       - name: Empty prbody.txt
