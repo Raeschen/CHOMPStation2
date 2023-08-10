@@ -25,7 +25,7 @@ jobs:
       - name: Branch and pull
         run: |
           switchoc = "!f() { git switch $1 2>/dev/null || git switch -c $1; }; f"
-          switchoc -c changelog_generation
+          git switchoc changelog_generation
           git pull origin/changelog_generation
           git pull --rebase origin/master
       - name: Ensure +x on CI directory
