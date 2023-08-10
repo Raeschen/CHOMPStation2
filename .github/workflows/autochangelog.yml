@@ -22,14 +22,10 @@ jobs:
     steps:
       - name: Clone
         uses: /actions/checkout@v3
-      - name: Branch and pull
+      - name: Branch or checkout
         run: |
-          git config --global user.email "you@example.com"
-          git config --global user.name "changelog bot"
           git fetch origin
           git checkout changelog_generation 2>/dev/null || git checkout -b changelog_generation
-          git pull origin changelog_generation
-          git pull --rebase origin master
       - name: Ensure +x on CI directory
         run: |
           chmod -R +x ./tools/ci
