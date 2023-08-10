@@ -61,7 +61,7 @@ jobs:
           git config --local user.name "Changelog Generation"
           git add .
           git commit -m "Changelog Auto-Update (`date`)" -a || true
-          git push -f -u origin changelog_generation
+          git push -u origin changelog_generation
       - name: Check if PR exists
         id: check
         env:
