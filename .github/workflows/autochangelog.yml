@@ -25,6 +25,7 @@ jobs:
       - name: Branch and pull
         run: |
           git switch -c changelog_generation
+          git pull
           git pull --rebase origin master
       - name: Ensure +x on CI directory
         run: |
