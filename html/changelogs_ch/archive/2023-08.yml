@@ -103,6 +103,24 @@
   - balance: Parry shield belt to last twice as long, but takes an extra second to
       recharge.
   - bugfix: Cell can no longer be removed from the parry shield belt.
+  Raeschen:
+  - rscadd: Added new mechanics or gameplay changes
+  - rscadd: Added more things
+  - rscdel: Removed old things
+  - qol: made something easier to use
+  - balance: rebalanced something
+  - bugfix: fixed a few things
+  - maptweak: tweaked something in a map
+  - soundadd: added audio or sound effects
+  - sounddel: removed audio or sound effects
+  - imageadd: added some icons or images
+  - imagedel: removed some icons or images
+  - spellcheck: fixed a few typos
+  - code_imp: changed some code
+  - refactor: refactored some code
+  - config: changed some config setting
+  - admin: messed with admin stuff
+  - server: something server ops should know
   Seris02:
   - rscadd: adds user_vars_to_edit (for events and stuff or just fun)
   TheGreatKitsune:
