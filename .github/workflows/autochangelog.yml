@@ -24,9 +24,10 @@ jobs:
         uses: /actions/checkout@v3
       - name: Branch and pull
         run: |
-          git switch -c changelog_generation
-          git pull origin changelog_generation
-          git pull --rebase origin master
+          switchoc = "!f() { git switch $1 2>/dev/null || git switch -c $1; }; f"
+          switchoc -c changelog_generation
+          git pull origin/changelog_generation
+          git pull --rebase origin/master
       - name: Ensure +x on CI directory
         run: |
           chmod -R +x ./tools/ci
