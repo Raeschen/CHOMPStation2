@@ -129,6 +129,24 @@
   - bugfix: Trasheater toy tease messages are no longer oral-specific.
   - qol: Vore nutrition is no longer useless for borgs.
 2023-08-11:
+  Raeschen:
+  - rscadd: Added new mechanics or gameplay changes
+  - rscadd: Added more things
+  - rscdel: Removed old things
+  - qol: made something easier to use
+  - balance: rebalanced something
+  - bugfix: fixed a few things
+  - maptweak: tweaked something in a map
+  - soundadd: added audio or sound effects
+  - sounddel: removed audio or sound effects
+  - imageadd: added some icons or images
+  - imagedel: removed some icons or images
+  - spellcheck: fixed a few typos
+  - code_imp: changed some code
+  - refactor: refactored some code
+  - config: changed some config setting
+  - admin: messed with admin stuff
+  - server: something server ops should know
   Seris02:
   - bugfix: fixes the input for customized markings not defaulting to their color
   - bugfix: fixes the vanity_copy_to proc which broke with the new marking customization
