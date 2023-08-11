@@ -147,6 +147,7 @@
   - config: changed some config setting
   - admin: messed with admin stuff
   - server: something server ops should know
+  - rscadd: test pr
   Seris02:
   - bugfix: fixes the input for customized markings not defaulting to their color
   - bugfix: fixes the vanity_copy_to proc which broke with the new marking customization
