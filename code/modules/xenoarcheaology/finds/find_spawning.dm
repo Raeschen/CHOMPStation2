@@ -709,3 +709,11 @@
 
 	if(become_anomalous)
 		become_anomalous()
+
+//ChompEDIT START - qdel refs
+/obj/item/weapon/archaeological_find/Destroy()
+	if(src.is_anomalous())
+		var/datum/component/artifact_master/arti_mstr = GetComponent(/datum/component/artifact_master)
+		arti_mstr.RemoveComponent()
+	. = ..()
+//ChompEDIT END
